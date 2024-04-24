@@ -23,7 +23,7 @@ function BuscarLogin(password,email){
   
     if(userRegistred){
 
-        window.location.href = "//localhost:5500/loja.html"
+        window.location.href = "/loja.html"
 
     }else{
         alert("Usuário ou senha inválido")

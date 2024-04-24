@@ -36,7 +36,7 @@ function CadastrarUsuario(nome,password,email){
        dadosBd.push(newUser)
 
        localStorage.setItem("users", JSON.stringify(dadosBd))
-       window.location.href = "//localhost:5500/loja.html"
+       window.location.href = "/loja.html"
     }
 
 }

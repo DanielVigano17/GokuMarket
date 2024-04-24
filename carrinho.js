@@ -70,7 +70,7 @@ function listarItensDaLoja (){
           <h5 class="card-title" style="text-align: center;">${item.nome}</h5>
           <p id="valor">R$ ${item.preco}</p>
           <a href="#" id="${item.id}" class="btn btn-primary">Comprar</a>
-          <img src="/img/bottom_card_img.png" id="card_bottom" alt="">
+          <img src="img/bottom_card_img.png" id="card_bottom" alt="">
         </div>
     </div>
         
