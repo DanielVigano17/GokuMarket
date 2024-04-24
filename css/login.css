@@ -1,0 +1,46 @@
+form{
+
+    background-color: transparent;
+}
+.form-control{
+    background-color: #FF6F3C;
+    outline: none;
+    border: none;
+}
+
+.container-fluid{
+    height: 100vh;
+    overflow: hidden;
+}
+#left{
+    background-color: #FF9A3C;
+    height: 100vh !important;
+}
+#right{
+    background-color: #155263;
+    position: relative;
+    
+}
+
+#img_principal{
+    position: absolute;
+    max-width: 800px;
+    bottom: -70px;
+    left: -10px;
+}
+
+.btn_login{
+
+    background-color: #FF6F3C;
+    border: none;
+    padding: 12px;
+    width: 180px;
+    margin: 30px auto;
+    border-radius: 28px;
+    color: white;
+    cursor: pointer;
+}
+main{
+    height: 100vh;
+}
+
