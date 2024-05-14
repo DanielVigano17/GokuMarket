@@ -7,6 +7,7 @@ const formulario = document.querySelector("#form_login");
             nome:"daniel",
             email:"danielvigano17@gmail.com",
             senha:"1234",
+            carrinho:[]
         }
     ]
 
@@ -23,10 +24,12 @@ function BuscarLogin(password,email){
   
     if(userRegistred){
 
-        window.location.href = "/loja.html"
+        sessionStorage.setItem("user",JSON.stringify(userRegistred))
+
+        window.location.href = "/loja.html";
 
     }else{
-        alert("Usuário ou senha inválido")
+        alert("Usuário ou senha inválido");
     }
 
 }

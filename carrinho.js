@@ -64,25 +64,32 @@ function listarItensDaLoja (){
     let html = "";
     itens.forEach(item => {
         html+= `
-        <div class="card" style="width: 16rem;">
-        <img class="card-img-top" src="${item.imagem}">
-        <div class="card-body">
-          <h5 class="card-title" style="text-align: center;">${item.nome}</h5>
-          <p id="valor">R$ ${item.preco}</p>
-          <a href="#" id="${item.id}" class="btn btn-primary">Comprar</a>
-          <img src="img/bottom_card_img.png" id="card_bottom" alt="">
-        </div>
-    </div>
-        
-        `    
+            <div class="card" style="width: 16rem;">
+            <img class="card-img-top" src="${item.imagem}">
+            <div class="card-body">
+                <h5 class="card-title" style="text-align: center;">${item.nome}</h5>
+                <p id="valor" style="z-index: 2;">R$ ${item.preco}</p>
+                <a href="#" id="${item.id}" style="z-index: 2;" onclick="adicionarAoCarrinho(event)" class="btn btn-primary">Comprar</a>
+                <img src="img/bottom_card_img.png" id="card_bottom" alt="">
+            </div>
+            </div>
+            `;
     });
     lista_item.innerHTML = html;
 }
 
 
 
-function adicionarAoCarrinho(){
+function adicionarAoCarrinho(e){
 
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    const item = itens.filter(element => {
+        
+        return element.id == e.target.id
+        
+    })
+    user.carrinho.push(item[0]);
+    sessionStorage.setItem("user",JSON.stringify(user));
 }
 
 listarItensDaLoja();

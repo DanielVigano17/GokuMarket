@@ -40,6 +40,7 @@ max-width: 99vw;
 
 .itens{
     display: flex;
+    position: relative;
     gap: 28px;
     width: 100%;
     margin-inline: 32px;
@@ -59,4 +60,39 @@ max-width: 99vw;
 .img_carrinho{
 
     max-width: 140px;
+}
+
+.infos_item{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    padding-inline: 32px;
+    align-items: center;
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+}
+
+.valor_total{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.valor_total label{
+    margin: 0;    
+}
+.valor_total span{
+    text-align: center;    
+}
+
+.excluir{
+    max-width: 32px;
 }
