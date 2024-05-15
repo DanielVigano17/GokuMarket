@@ -5,6 +5,7 @@ header{
 }
 body{
     position: relative;
+    overflow-x: hidden;
 }
 #img_header{
     max-width: 110px;
@@ -26,12 +27,20 @@ body{
 .bg{
     padding-top: 40px;
     background-color: #155263;
-    height: 99vh;
-}
-
-.carrinho{
+    min-height: 99vh;
     height: fit-content;
 }
+
+/* .carrinho{
+    height: fit-content;
+    max-height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 50px;
+}
+.esconder{
+    overflow: hidden;
+} */
 .back_img{
 position: absolute;
 bottom: 0;
@@ -46,11 +55,12 @@ max-width: 99vw;
     margin-inline: 32px;
     max-width: 1080px;
     background-color: #FF6F3C;
-    max-height: 140px;
-    height: 140px;
+    max-height: 500px;
+    height: 155px;
     margin-top: 24px;
     border-radius: 18px;
     overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
 }
 .quantidade{
@@ -95,4 +105,26 @@ max-width: 99vw;
 
 .excluir{
     max-width: 32px;
+}
+
+#qtd{
+    max-width: 200px;
+}
+
+.pagamento{
+    background-color: #FFC93C;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    width: 100%;
+    position: absolute;
+    
+}
+
+.btn_pagar{
+
+    max-height: 45px;
+    background-color: #155263;
+    color: white;
+    font-weight: 700;
 }

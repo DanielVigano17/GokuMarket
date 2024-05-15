@@ -1,13 +1,15 @@
 const lista_item = document.querySelector(".carrinho");
 const botaoAdicionarCarrinho = document.querySelector(".lista_item");
+const nome_usuario = document.querySelector(".nome_usuario");
 
 const user = JSON.parse(sessionStorage.getItem("user")) || null
+nome_usuario.innerHTML = `Seu carrinho, ${user.nome}!!`
 
 function listarItensDaLoja (){
    let html = "";
    user.carrinho.forEach(item => {
        html+= `
-       <div class="itens" style="z-index: 5;"">
+       <div data-aos="zoom-in-down" class="itens" style="z-index: 5;"">
        <img src="${item.imagem}" class="img_carrinho" alt="">
 
        <div class="infos_item">
@@ -16,7 +18,7 @@ function listarItensDaLoja (){
                <p>Preço : R$${item.preco}</p>
                <div class="quantidade">
                    <span>Unidades:</span>
-                   <input type="number" value="1" onchange="alterarValor(event)" class="${item.nome}">
+                   <input type="number" value="1" onchange="alterarValor(event)" id="qtd" min="1" class="${item.nome}">
                </div>
            </div>
            <div class="actions">

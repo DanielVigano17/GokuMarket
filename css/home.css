@@ -6,6 +6,7 @@ header{
 #img_header{
 
     max-width: 110px;
+    margin-right: 18vw;
 }
 
 .lista_item{
@@ -36,6 +37,7 @@ header{
     color: black;
     width: 100%;
     max-width: 140px;
+  
     
 }
 #valor{
@@ -51,4 +53,25 @@ header{
     padding-top: 40px;
     background-color: #155263;
     height: fit-content;
+    min-height: 99vh;
+}
+
+.carrinho_btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.quantidade_carrinho{
+    position: absolute;
+    border-radius: 30px;
+    background-color: red;
+    color: white;
+    width: 23px;
+    height: 23px;
+    top: 20px;
+    right: -10px;
+    text-align: center;
 }

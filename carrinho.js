@@ -1,6 +1,8 @@
  const lista_item = document.querySelector(".lista_item");
  const botaoAdicionarCarrinho = document.querySelector(".lista_item");
- 
+ const qtd_carrinho = document.querySelector(".quantidade_carrinho");
+ const user = JSON.parse(sessionStorage.getItem("user"));
+ qtd_carrinho.innerHTML = user.carrinho.length
  const itens = [
     {
         id:"1",
@@ -64,7 +66,7 @@ function listarItensDaLoja (){
     let html = "";
     itens.forEach(item => {
         html+= `
-            <div class="card" style="width: 16rem;">
+            <div data-aos="flip-left" class="card" style="width: 16rem;">
             <img class="card-img-top" src="${item.imagem}">
             <div class="card-body">
                 <h5 class="card-title" style="text-align: center;">${item.nome}</h5>
@@ -89,7 +91,10 @@ function adicionarAoCarrinho(e){
         
     })
     user.carrinho.push(item[0]);
+    qtd_carrinho.innerHTML = user.carrinho.length
     sessionStorage.setItem("user",JSON.stringify(user));
+
+    alert("Item adicionado ao carrinho");
 }
 
 listarItensDaLoja();
