@@ -2,7 +2,7 @@
  const botaoAdicionarCarrinho = document.querySelector(".lista_item");
  const qtd_carrinho = document.querySelector(".quantidade_carrinho");
  const user = JSON.parse(sessionStorage.getItem("user"));
- qtd_carrinho.innerHTML = user.carrinho.length
+ qtd_carrinho.innerHTML = user.carrinho.length || 0
  const itens = [
     {
         id:"1",
