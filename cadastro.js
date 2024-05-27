@@ -7,6 +7,7 @@ const formulario = document.querySelector("#form_login");
             nome:"daniel",
             email:"danielvigano17@gmail.com",
             senha:"1234",
+            carrinho:[],
         }
     ]
 
@@ -31,6 +32,7 @@ function CadastrarUsuario(nome,password,email){
             nome:nome,
             email:email,
             senha:password,
+            carrinho:[]
        }
 
        dadosBd.push(newUser)

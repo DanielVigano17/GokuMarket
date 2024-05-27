@@ -4,9 +4,14 @@ header{
     height: 90px;
 }
 #img_header{
-
     max-width: 110px;
-    margin-right: 18vw;
+}
+
+.conteudo_header{
+    max-width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .lista_item{
