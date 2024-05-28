@@ -43,8 +43,7 @@ function alterarValor(e){
     const item = user.carrinho.find(element =>{
         return element.nome.includes(e.target.classList[0]);
     })
-
-    console.log();
+    
     span.innerHTML = `${e.target.value * item.preco}R$`
 
 }

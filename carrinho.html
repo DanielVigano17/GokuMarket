@@ -17,11 +17,42 @@
     <div class="row justify-content-between align-items-center container">
        
             <h3 class="nome_usuario">Seu carrinho, Daniel !!</h3>
-            <button class="btn btn-primary btn_pagar">Pagar</button>
+            <button class="btn btn-primary btn_pagar" data-toggle="modal" data-target="#modalExemplo">Pagar</button>
      
     </div>
 
 </header>
+
+<!-- Modal -->
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: white;">Métodos de Pagamento</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul class="content_pagamento">
+            <li class="valor">Total : R$500</li>
+            <li class="meios_pagamento">
+                <div class="meio_pagamento">
+                    <img src="img/logo-pix-icone-1024.webp" alt="">
+                </div>
+                <div class="meio_pagamento">
+                    <img src="img/Mastercard-logo.svg.webp" alt="">
+                </div>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Pagar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <main class="bg">
     <section class="container justify-content-center lista_item">

@@ -31,6 +31,40 @@ body{
     height: fit-content;
 }
 
+.content_pagamento li{
+
+    list-style: none;
+
+}
+
+.valor{
+    color: white;
+     font-weight: 700;
+     font-size: 20px;
+     margin-bottom: 24px;
+}
+
+.meios_pagamento{
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.meio_pagamento{
+    cursor: pointer;
+    padding: 12px;
+    
+}
+
+.meio_pagamento img{
+    max-width: 64px;
+}
+.modal-content{
+
+    background-color: #155263;
+}
+
 /* .carrinho{
     height: fit-content;
     max-height: 600px;
